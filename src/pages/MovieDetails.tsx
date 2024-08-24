@@ -4,7 +4,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 const MovieDetails = () => {
   const { id } = useParams();
-  const { data, isPending, isError } = useMovie(id);
+  const { data, isPending, isError } = useMovie(id ?? "");
 
   if (isPending) {
     return <LoadingSpinner />;
